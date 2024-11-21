@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webcam Capture</title>
+  <style>
+    #camera-container {
+      text-align: center;
+    }
+    #camera {
+      border: 2px solid #ccc;
+      margin-bottom: 10px;
+    }
+    #capture-button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #capture-button:hover {
+      background-color: #45a049;
+    }
+    #captured-image {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 640px;
+    }
+  </style>
+</head>
+<body>
+  <div id="camera-container">
+    <video id="camera" width="640" height="480" autoplay></video>
+    <button id="capture-button">Capture</button>
+    <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+    <img id="captured-image" src="" alt="Captured Image" style="display:none;">
+  </div>
+
+  <script src="camera-script.js"></script>
+</body>
+</html>
